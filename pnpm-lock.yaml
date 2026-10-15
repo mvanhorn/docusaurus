@@ -552,8 +552,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(react-router@5.3.4(react@19.3.0))(react@19.3.0)
       react-router-dom:
-        specifier: ^5.3.4
-        version: 5.3.4(react@19.3.0)
+        specifier: ^6.30.6
+        version: 6.30.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       semver:
         specifier: ^7.8.5
         version: 7.8.5
@@ -1148,8 +1148,8 @@ importers:
         specifier: ^2.3.2
         version: 2.3.2
       react-router-dom:
-        specifier: ^5.3.4
-        version: 5.3.4(react@19.3.0)
+        specifier: ^6.30.6
+        version: 6.30.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
 
   packages/docusaurus-plugin-content-pages:
     dependencies:
@@ -1697,8 +1697,8 @@ importers:
         specifier: ^19.3.0
         version: 19.3.0(react@19.3.0)
       react-router-dom:
-        specifier: ^5.3.4
-        version: 5.3.4(react@19.3.0)
+        specifier: ^6.30.6
+        version: 6.30.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       rtlcss:
         specifier: ^4.3.0
         version: 4.3.0
@@ -1783,8 +1783,8 @@ importers:
         specifier: ^4.18.1
         version: 4.18.1
       react-router-dom:
-        specifier: ^5.3.4
-        version: 5.3.4(react@19.3.0)
+        specifier: ^6.30.6
+        version: 6.30.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
 
   packages/docusaurus-theme-live-codeblock:
     dependencies:
@@ -5178,6 +5178,10 @@ packages:
   '@pnpm/npm-conf@3.0.3':
     resolution: {integrity: sha512-//0sR/cow/s4ICQaYoAobOl4aU8cjU6x/V24V7XkKotb9+O+3zySIYp146vpaobYHnxa4pZX8NkV54Z5AwbDKA==}
     engines: {node: '>=12'}
+
+  '@remix-run/router@1.23.4':
+    resolution: {integrity: sha512-q7j5geK7xs3UJSdm9/iytUNclBnLmYx1EnSeCFXHPeutdqgIMeFeHtUZgS3EhlKxdBEAu8OwtJCwmLrEzpSs7Q==}
+    engines: {node: '>=14.0.0'}
 
   '@rolldown/binding-android-arm-eabi@1.2.7':
     resolution: {integrity: sha512-EypzgnYCwyVY4NDHKzGmNJT5b+XaQEBniHxsMdeIQLB/tcCzZnhqrzHpZFbX9iaxx+5RiB8caATBtfvZP7zVxQ==}
@@ -11349,15 +11353,23 @@ packages:
       react: '>=15'
       react-router: '>=5'
 
-  react-router-dom@5.3.4:
-    resolution: {integrity: sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==}
+  react-router-dom@6.30.6:
+    resolution: {integrity: sha512-0RHKZz7wwffvkU+2MFVT2NnjK44ssLEV+m0CAJaS2Ksmorrwj7WxH00jO0SOCW26/tINUnJHToXblDs33I38YQ==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      react: '>=15'
+      react: '>=16.8'
+      react-dom: '>=16.8'
 
   react-router@5.3.4:
     resolution: {integrity: sha512-Ys9K+ppnJah3QuaRiLxk+jDWOR1MekYQrlytiXxC1RyfbdsZkS5pvKAzCCr031xHixZwpnsYNT5xysdFHQaYsA==}
     peerDependencies:
       react: '>=15'
+
+  react-router@6.30.6:
+    resolution: {integrity: sha512-5HfK7k5im7LTOB0EqCQmfvy4C13G92Ssj1VTmouTK3AJvyjKTnFuCV0vcMAD/JS+JC4DvDIBRrlAeJIFjh5VWg==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
 
   react@16.14.0:
     resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
@@ -16305,6 +16317,8 @@ snapshots:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+
+  '@remix-run/router@1.23.4': {}
 
   '@rolldown/binding-android-arm-eabi@1.2.7':
     optional: true
@@ -23664,16 +23678,12 @@ snapshots:
       react: 19.3.0
       react-router: 5.3.4(react@19.3.0)
 
-  react-router-dom@5.3.4(react@19.3.0):
+  react-router-dom@6.30.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
-      '@babel/runtime': 7.29.7
-      history: 4.10.1
-      loose-envify: 1.4.0
-      prop-types: 15.8.1
+      '@remix-run/router': 1.23.4
       react: 19.3.0
-      react-router: 5.3.4(react@19.3.0)
-      tiny-invariant: 1.3.3
-      tiny-warning: 1.0.3
+      react-dom: 19.3.0(react@19.3.0)
+      react-router: 6.30.6(react@19.3.0)
 
   react-router@5.3.4(react@19.3.0):
     dependencies:
@@ -23687,6 +23697,11 @@ snapshots:
       react-is: 16.13.1
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
+
+  react-router@6.30.6(react@19.3.0):
+    dependencies:
+      '@remix-run/router': 1.23.4
+      react: 19.3.0
 
   react@16.14.0:
     dependencies:
